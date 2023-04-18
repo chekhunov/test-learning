@@ -1,0 +1,62 @@
+.burger {
+  background-color: #2C397C;
+  position: relative;
+  transition: transform 0.27s ease, bottom 0.27s ease;
+  margin-right: 10px;
+  width: 16px;
+  top: -6px;
+  height: 0;
+
+  &.bigger {
+    width: 23px; 
+
+    .burger span {
+      &::before {
+        bottom: -14px;
+      }
+      &::after {
+        bottom: -7px;
+      }
+    }
+  }
+
+  &.active {
+    span {
+      transform: rotate(45deg);
+      bottom: -5px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      bottom: -5px;
+    }
+
+    &::after {
+      transform: scale(0);
+    }
+  }
+
+  span,
+  &::before,
+  &::after {
+    transition: inherit;
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    height: 1px;
+    width: inherit;
+    left: 0;
+  }
+
+  span {
+    bottom: 0;
+  }
+
+  &::before {
+    bottom: -12px;
+  }
+
+  &::after {
+    bottom: -6px;
+  }
+} 

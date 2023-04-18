@@ -9,15 +9,60 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.3.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@formatjs/ts-transformer": "^3.13.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/lab": "^5.0.0-alpha.126",
+    "@mui/material": "^5.12.0",
+    "@mui/system": "^5.12.0",
+    "@next/bundle-analyzer": "^13.3.0",
+    "@next/font": "^13.3.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
+    "babel-plugin-formatjs": "^10.5.0",
+    "classnames": "^2.3.2",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "eslint-plugin-formatjs": "^4.10.0",
+    "mobx": "^6.9.0",
+    "mobx-react-lite": "^3.4.3",
     "next": "13.3.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-seo": "^6.0.0",
+    "next-transpile-modules": "^10.0.0",
+    "object-path": "^0.11.8",
+    "prettier": "^2.8.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-intl": "^6.4.0",
+    "react-lazy-hydration": "^0.1.0",
+    "react-table": "^7.8.0",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@codica/eslint-config-react-ts": "^2.1.1",
+    "@types/object-path": "^0.11.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn lint",
+      "prettier --write"
+    ]
   }
 }
