@@ -29,7 +29,7 @@ const Sound = observer(() => {
       <Button
         onClick={handleClick}
         sx={{
-          position: 'absolute',
+          position: 'fixed',
           bottom: '40px',
           right: '40px',
           borderRadius: '50%'
