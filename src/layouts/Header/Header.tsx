@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 import { AppBar, Toolbar } from '@mui/material'
 import HeaderDesktop from "./HeaderDesktop";
-// import HeaderMobile from "./HeaderMobile";
+import HeaderMobile from './HeaderMobile';
 
 const Header: FC = () => {
   return (
@@ -26,7 +26,7 @@ const Header: FC = () => {
           pr: { lg: 1.5 }
         }}
       >
-        {/* <HeaderMobile /> */}
+        <HeaderMobile />
         <HeaderDesktop />
       </Toolbar>
     </AppBar>

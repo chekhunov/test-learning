@@ -19,6 +19,7 @@ const useTableColumns = () => {
       {
         Header: headerName,
         accessor: 'student',
+        key: 'first_name',
         minWidth: 150,
         Cell: ({ value }) => (
           <Link href={ROUTES.students + '/' + value.id} underline="hover">
@@ -31,6 +32,7 @@ const useTableColumns = () => {
       {
         Header: 'Course Name',
         accessor: 'student.active_courses',
+        key: 'active_courses',
         Cell: ({ value }) => (
           <CoursesNamesComponent active_courses_data={value} />
         ),
@@ -41,6 +43,7 @@ const useTableColumns = () => {
       {
         Header: 'Module Name',
         accessor: 'student.active_modules',
+        key: 'active_modules',
         Cell: ({ value }) => (
           <ModulesNamesComponent active_modules_data={value} />
         ),
@@ -51,6 +54,7 @@ const useTableColumns = () => {
       {
         Header: 'Lesson Name',
         accessor: 'student.active_lessons',
+        key: 'active_lessons',
         Cell: ({ value }) => (
           <LessonsNamesComponent active_lessons_data={value} />
         ),
@@ -61,6 +65,7 @@ const useTableColumns = () => {
       {
         Header: 'Progress',
         accessor: 'student.progress',
+        key: 'progress',
         Cell: ({ value }) => <ProgressComponent progress={value} />,
         minWidth: 155,
         width: '15%',
@@ -69,6 +74,7 @@ const useTableColumns = () => {
       {
         Header: 'Actions',
         accessor: 'id',
+        key: '',
         Cell: ({ value }) => <DetailsLinkComponent id={Number(value)} />,
         minWidth: 155,
         width: '15%',

@@ -26,8 +26,10 @@ export default class StudentsStore {
   private _totalCount: number
   private _limit: number
   private _isLoading: boolean
+  private _sortActiveColumn: string
   constructor() {
     this._isLoading = false
+    this._sortActiveColumn = ''
     this._students = []
     this._page = 1
     this._totalCount = 0
@@ -37,6 +39,9 @@ export default class StudentsStore {
 
   setIsLoading(bool) {
     this._isLoading = bool
+  }
+  setSortActiveColumn(number) {
+    this._isLoading = number
   }
   setStudents(students) {
     this._students = students
@@ -50,6 +55,9 @@ export default class StudentsStore {
 
   get isLoading() {
     return this._isLoading
+  }
+  get sortActiveColumn() {
+    return this._sortActiveColumn
   }
   get students() {
     return this._students

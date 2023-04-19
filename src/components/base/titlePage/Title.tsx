@@ -4,7 +4,7 @@ import { AlertProps } from '@mui/material'
 import Text from '~/components/base/Text'
 
 interface AuthTitleProps {
-  sx: AlertProps['sx']
+  sx?: AlertProps['sx']
   children: React.ReactNode
 }
 

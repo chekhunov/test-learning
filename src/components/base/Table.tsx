@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import {
   Table as MuiTable,
@@ -6,6 +6,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
+  TableSortLabel,
   Theme,
   useMediaQuery
 } from '@mui/material'
@@ -16,16 +17,28 @@ import Text from './Text'
 interface TableProps {
   data: any
   columns: any
+  sortColumn: {
+    order: string
+    key: string
+  }
+  setSortColumn: any
 }
 
-const Table = ({ columns, data }: TableProps) => {
+const Table = ({ columns, data, sortColumn, setSortColumn }: TableProps) => {
   const isMobile = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
 
   const { getTableProps, headerGroups, rows, prepareRow } = useTable({
     columns,
     data
   })
-  console.log(columns, data, 'table')
+
+  const createSortHandler =
+    (newOrderBy: any) => (event: React.MouseEvent<unknown>) => {
+      setSortColumn(newOrderBy)
+      // users.sort(byField('name'))
+      // users.forEach((user) => alert(user.name))
+    }
+
   return (
     <MuiTable {...getTableProps()}>
       {!isMobile && (
@@ -45,9 +58,28 @@ const Table = ({ columns, data }: TableProps) => {
                       }}
                       key={column.id}
                     >
-                      <Text size={{ xs: 'body2' }} fontWeight={600}>
-                        {column.render('Header')}
-                      </Text>
+                      {column.render('Header') !== 'Actions' ? (
+                        <TableSortLabel
+                          active={Number(sortColumn.order) === column.order}
+                          direction={
+                            Number(sortColumn.order) === column.order
+                              ? 'desc'
+                              : 'asc'
+                          }
+                          onClick={createSortHandler({
+                            order: column.order,
+                            key: column.key
+                          })}
+                        >
+                          <Text size={{ xs: 'body2' }} fontWeight={600}>
+                            {column.render('Header')}
+                          </Text>
+                        </TableSortLabel>
+                      ) : (
+                        <Text size={{ xs: 'body2' }} fontWeight={600}>
+                          {column.render('Header')}
+                        </Text>
+                      )}
                     </TableCell>
                   )
                 })}

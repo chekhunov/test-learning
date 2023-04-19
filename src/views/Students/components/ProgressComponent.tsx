@@ -15,9 +15,7 @@ const ProgressComponent = ({
     <>
       {progress?.map(({ course_id, name, progress }) => (
         <Stack key={course_id}>
-          <Text size={{ xs: 'body2' }}>
-            {name}: {progress}%
-          </Text>
+          <Text size={{ xs: 'body2' }}>{progress}%</Text>
         </Stack>
       ))}
     </>
