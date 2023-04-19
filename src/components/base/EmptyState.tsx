@@ -5,7 +5,7 @@ import { Button, Stack, StackProps } from '@mui/material'
 import Text from './Text'
 
 interface EmptyStateProps extends StackProps {
-  image: React.ReactElement
+  image?: React.ReactElement
   text: string | React.ReactNode
   buttonText?: string
   onClick?: () => void

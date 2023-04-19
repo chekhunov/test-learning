@@ -11,8 +11,6 @@ import {
 } from '@mui/material'
 import { useTable } from 'react-table'
 
-// import useAuth from '~/services/Auth/useAuth'
-
 import Text from './Text'
 
 interface TableProps {
@@ -27,7 +25,7 @@ const Table = ({ columns, data }: TableProps) => {
     columns,
     data
   })
-
+  console.log(columns, data, 'table')
   return (
     <MuiTable {...getTableProps()}>
       {!isMobile && (

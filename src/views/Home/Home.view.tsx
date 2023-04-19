@@ -13,7 +13,7 @@ const HomePageView: FC = () => {
   return (
     <>
       <Typography component="h1" sx={{ display: "none" }}>
-        {"Platform to book a cake for your next event"}
+        {"Platform test learning"}
       </Typography>
 
       <FormSection />

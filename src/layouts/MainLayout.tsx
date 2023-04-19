@@ -10,6 +10,7 @@ import Sound from '~/components/elements/Sound'
 const Footer = dynamic(() => import('./Footer'))
 
 import SoundStore from '~/store/Sound.store'
+import StudentsStore from '~/store/Students.store'
 
 interface MainLayoutProps {
   hideHeader?: boolean
@@ -20,6 +21,7 @@ interface MainLayoutProps {
 interface LayoutContextPropsValues {
   setSx: React.Dispatch<React.SetStateAction<BoxProps['sx']>>
   sound: SoundStore
+  students_data: StudentsStore
 }
 
 export const LayoutContext = React.createContext<LayoutContextPropsValues>(
@@ -34,7 +36,9 @@ const MainLayout: FC<MainLayoutProps> = ({
   const [sx, setSx] = useState<BoxProps['sx']>({})
 
   return (
-    <LayoutContext.Provider value={{ setSx, sound: new SoundStore() }}>
+    <LayoutContext.Provider
+      value={{ setSx, sound: new SoundStore(), students_data: new StudentsStore() }}
+    >
       <Box
         sx={{
           display: 'flex',

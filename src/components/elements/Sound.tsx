@@ -18,6 +18,8 @@ const Sound = observer(() => {
     audio?.pause()
   }
 
+  const handleClick = () => (sound._isPlaying ? pause(tick) : play(tick))
+
   useEffect(() => {
     setTick(new Audio('/sounds/bingo.mp3'))
   }, [])
@@ -25,7 +27,7 @@ const Sound = observer(() => {
   return (
     <>
       <Button
-        onClick={() => (sound._isPlaying ? pause(tick) : play(tick))}
+        onClick={handleClick}
         sx={{
           position: 'absolute',
           bottom: '40px',

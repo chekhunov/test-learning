@@ -15,8 +15,8 @@ interface HeaderDesktopProps {
 
 const HeaderDesktop: FC<HeaderDesktopProps> = ({}) => {
   const navLinks = [
-    { key: 'list_students', label: 'List of Students', to: ROUTES.list_students },
-    { key: 'course_catalog', label: 'Course Catalog', to: ROUTES.catalog },
+    { key: 'students', label: 'Students', to: ROUTES.students },
+    { key: 'course_catalog', label: 'Course Catalog', to: ROUTES.courses },
     { key: 'my_training', label: 'My training', to: ROUTES.learn }
   ]
 

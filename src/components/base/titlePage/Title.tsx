@@ -1,25 +1,24 @@
+import React from 'react'
 import { AlertProps } from '@mui/material'
 
 import Text from '~/components/base/Text'
 
 interface AuthTitleProps {
   sx: AlertProps['sx']
-  mx?: number
-  title: string
+  children: React.ReactNode
 }
 
-const Title = ({ mx, sx, title }: AuthTitleProps) => {
+const Title = ({ sx, children }: AuthTitleProps) => {
   return (
     <Text
       component="h1"
       textAlign="center"
       color="textPrimary"
       fontWeight={700}
-      mx={mx}
       size={{ xs: 'h3', lg: 'h2' }}
       sx={sx}
     >
-      {title}
+      {children}
     </Text>
   )
 }

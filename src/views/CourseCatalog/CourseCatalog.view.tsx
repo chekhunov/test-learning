@@ -7,11 +7,19 @@ import TextBg from '~/components/common/TextBg'
 import ROUTES from '~/utils/constants/routes'
 import Title from '~/components/base/titlePage'
 import Link from '~/components/base/Link'
+import { FormattedMessage } from 'react-intl'
 
 const CourseCatalogView = () => {
   return (
     <Box maxWidth={405} sx={{ m: '0 auto' }}>
-      <Title sx={{ mt: 4, mb: 2.3 }} title={'Course Catalog'} />
+      <Title
+        sx={{
+          mt: 4,
+          mb: { xs: 3, sm: 0 }
+        }}
+      >
+        <FormattedMessage id="course_catalog" defaultMessage="Course Catalog" />
+      </Title>
 
       <Typography
         variant="body2"

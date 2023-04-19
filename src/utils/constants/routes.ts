@@ -25,8 +25,8 @@ const ROUTES = {
   // favourites: '/profile/favourites',
   dashboard: '/profile/dashboard',
 
-  list_students: '/list-students',
-  catalog: '/course-catalog',
+  students: '/students',
+  courses: '/courses',
   learn: '/learn',
   search: '/search',
   media: '/media',
