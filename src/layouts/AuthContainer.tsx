@@ -2,10 +2,6 @@ import React, { FC, PropsWithChildren } from "react";
 
 import { Container, Stack } from "@mui/material";
 
-// import {
-//   PopoverTrigger as OrigPopoverTrigger
-// } from '@chakra-ui/react';
-
 const AuthContainer: FC<PropsWithChildren> = ({ children }) => {
   return (
     <Container maxWidth="lg">

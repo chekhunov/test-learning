@@ -1,32 +1,19 @@
 import React, { FC, useCallback, useState } from 'react'
 
-// import { ExpandMore } from '@mui/icons-material'
 import {
   FormControl,
   InputLabel,
-  MenuItem,
-  Select,
   SelectChangeEvent,
   SelectProps
 } from '@mui/material'
-
-// import useOptions, { OptionsProps } from '~/hooks/useOptions'
-
-import ArrowIcon from '~/assets/icons/proffesional-account/arrow-down.svg'
-
-// import { Option } from '../fields/SelectField'
 
 type Props = {
   controlledValue?: string
   label?: string
   onChange?: any
-  // options?: Option[]
-  // optionSettings?: Partial<OptionsProps>
 }
 
 const SelectInput: FC<Props & Partial<SelectProps>> = ({
-  // options: customOptions = [],
-  // optionSettings = {},
   label,
   controlledValue,
   onChange,
@@ -34,14 +21,6 @@ const SelectInput: FC<Props & Partial<SelectProps>> = ({
 }) => {
   const [value, setValue] = useState('')
   const isControlled = !!controlledValue
-  const actualValue = controlledValue || value
-
-  // const { options } = useOptions({
-  //   ...optionSettings,
-  //   key: optionSettings?.key,
-  //   value: actualValue,
-  //   options: customOptions
-  // })
 
   const controlledOnChange = useCallback((_e, value) => {
     setValue(value?.props.value)
@@ -85,21 +64,6 @@ const SelectInput: FC<Props & Partial<SelectProps>> = ({
       >
         {label}
       </InputLabel>
-
-      {/* <Select
-        labelId="user-label"
-        label={label}
-        value={actualValue}
-        onChange={handleChange}
-        IconComponent={ArrowIcon}
-        {...rest}
-      >
-        {options.sort().map((option: Option) => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </Select> */}
     </FormControl>
   )
 }

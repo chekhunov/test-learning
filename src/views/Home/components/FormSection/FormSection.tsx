@@ -4,11 +4,7 @@ import React from "react";
 import LazyHydrate from "react-lazy-hydration";
 
 import Text from "~/components/base/Text";
-// import TextBg from "~/components/common/TextBg";
-
 import FullSectionContainer from "../FullSectionContainer";
-
-// const SearchForm = dynamic(() => import('~/components/forms/SearchForm'))
 
 const FormSection = () => (
   <FullSectionContainer
@@ -25,20 +21,8 @@ const FormSection = () => (
       mb={4}
       sx={{ "& br": { display: { xs: "none", md: "block" } } }}
     >
-      {/* <TextBg
-        sx={{ '& svg': { width: { xs: 165, md: 319 } } }}
-        positionIcon={{
-          top: { xs: -19, md: -1 },
-          left: { xs: -5, md: -10 }
-        }}
-      > */}
-      {"The place to <text>book a cake</text> {br}for your next event"}
-      {/* </TextBg> */}
+      {"The place to <text>"}
     </Text>
-
-    {/* <LazyHydrate whenIdle>
-      <SearchForm />
-    </LazyHydrate> */}
   </FullSectionContainer>
 );
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import {
   Table as MuiTable,
@@ -35,8 +35,6 @@ const Table = ({ columns, data, sortColumn, setSortColumn }: TableProps) => {
   const createSortHandler =
     (newOrderBy: any) => (event: React.MouseEvent<unknown>) => {
       setSortColumn(newOrderBy)
-      // users.sort(byField('name'))
-      // users.forEach((user) => alert(user.name))
     }
 
   return (
@@ -105,13 +103,6 @@ const Table = ({ columns, data, sortColumn, setSortColumn }: TableProps) => {
 export default Table
 
 const DesktopTableRow = ({ row }) => {
-  // const {
-  //   roles,
-  //   selectors: { hasRole }
-  // } = useAuth()
-
-  // const isView = hasRole(roles.cake_maker) && !row.original.viewed
-
   return (
     <TableRow
       {...row.getRowProps()}
@@ -140,13 +131,6 @@ const DesktopTableRow = ({ row }) => {
 }
 
 const MobileTableRow = ({ row }) => {
-  // const {
-  //   roles,
-  //   selectors: { hasRole }
-  // } = useAuth()
-
-  // const isView = hasRole(roles.cake_maker) && !row.original.viewed
-
   return (
     <TableRow
       {...row.getRowProps()}

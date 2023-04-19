@@ -2,11 +2,7 @@ import React from 'react'
 
 import { Box, Typography } from '@mui/material'
 
-import TextBg from '~/components/common/TextBg'
-
-import ROUTES from '~/utils/constants/routes'
 import Title from '~/components/base/titlePage'
-import Link from '~/components/base/Link'
 import { FormattedMessage } from 'react-intl'
 
 const CourseCatalogView = () => {
@@ -27,7 +23,7 @@ const CourseCatalogView = () => {
         color="text.headline"
         mb={4}
       >
-        HHHHHHHHZZZZZ
+        {' HHHHHHHHZZZZZ'}
       </Typography>
     </Box>
   )

@@ -16,19 +16,18 @@ import EmptyState from '~/components/base/EmptyState'
 
 import useTableColumns from './Students.config'
 
-import { LayoutContext } from '~/layouts/MainLayout'
 import { fetchStudents } from '~/services/api/studentsApi'
+import { LayoutContext } from '~/layouts/MainLayout'
 
 import { useStyles } from './Students.styles'
 
 const StudentsView = observer(() => {
+  const styles = useStyles()
   const { formatMessage } = useIntl()
 
   const defaultValue = { order: '', key: '' }
 
   const [sortColumn, setSortColumn] = useState(defaultValue)
-
-  const styles = useStyles()
 
   const { students_data } = useContext(LayoutContext)
 

@@ -13,22 +13,10 @@ const ROUTES = {
   resetPasswordVerify: '/reset-password/successful',
 
   // profile
-  profile: '/professional-account',
-  details: '/profile/details',
-  // calendar: '/profile/calendar',
-  // requests: '/profile/requests',
-  // payment: '/profile/requests/payment',
-  // chat: '/profile/chat',
-  // orders: '/profile/orders',
-  review: '/profile/reviews',
-  // settings: '/profile/settings',
-  // favourites: '/profile/favourites',
-  dashboard: '/profile/dashboard',
-
   students: '/students',
   courses: '/courses',
   learn: '/learn',
-  search: '/search',
+
   media: '/media',
   subscription: '/subscription',
 

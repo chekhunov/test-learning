@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Text from '~/components/base/Text'
-import ROUTES from '~/utils/constants/routes'
 import { Stack } from '@mui/system'
 
 interface ProgressComponentProps {
