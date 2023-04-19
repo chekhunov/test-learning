@@ -40,8 +40,8 @@ const StudentsView = observer(() => {
         students_data.setTotalCount(data.length)
         students_data.setIsLoading(false)
       })
-      const interval = setInterval(fetchStudents, 6000)
-      return () => clearInterval(interval)
+      // const interval = setInterval(fetchStudents, 6000)
+      // return () => clearInterval(interval)
     } catch (error) {
       Toastr.error(error)
     }
